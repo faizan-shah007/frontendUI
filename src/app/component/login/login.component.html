@@ -1,0 +1,54 @@
+
+  <div class="row">
+      <nav class="navbar bg-dark navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand display-2 font-monospace" href="#">
+              <img src="../assets/Logo2.jpg" alt="logo" width="30" height="24" class="d-inline-block align-text-top">
+              WebEasy (Pvt) Ltd
+            </a>
+          </div>
+        </nav>
+
+
+
+
+
+
+
+<mat-card>
+  <mat-card-title class="pb-3">Login</mat-card-title>
+<mat-card-content>
+<form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+<div style="width: 180px;">
+  <p>
+    <mat-form-field>
+      <input type="text"  matInput placeholder="email" formControlName="email" #email>
+    </mat-form-field>
+  </p>
+  
+  <p>
+    <mat-form-field>
+      <input type="password" matInput placeholder="Password" formControlName="password" #password>
+    </mat-form-field>
+  </p>
+  
+  <p *ngIf="error" class="error">
+    {{ error }}
+  </p>
+</div>
+
+<div class="button justify-content-center d-flex">
+  <button type="submit" mat-button>Login</button>
+</div>
+
+</form>
+</mat-card-content>
+</mat-card>
+
+<!-- <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </div> -->
