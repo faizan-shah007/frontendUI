@@ -43,7 +43,8 @@ export class RegisterSignUpComponent implements OnInit {
         .subscribe(
           response => {
             console.log(response);
-            this.getAllUser();
+            const newusers = [...this.users, response as user];
+            this.users = newusers;
             this.userone = {
               id: 0,
               FirstName: '',
